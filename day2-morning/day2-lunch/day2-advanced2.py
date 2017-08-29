@@ -15,7 +15,8 @@ for line in fh:
         continue
     else:
         if (twoL == line.split("\t")[2]):
-            if ((line.split('\t')[3]) >= begin) and ((line.split("\t")[3]) <= end):
+            readnum = line.split("\t")[3]
+            if (int(readnum) >= begin) and (int(readnum) <= end):
                 numlines +=1
                 
             else:
