@@ -1,0 +1,33 @@
+Velvet low reads:
+length of contigs:  311
+minimum:  57
+maximum:  998
+average contig length:  188
+n50:  261
+
+Spades low reads:
+length of contigs:  128
+minimum:  207
+maximum:  1737
+average contig length:  389
+n50:  374
+
+Spades MAP006:
+length of contigs:  64
+minimum:  207
+maximum:  6732
+average contig length:  1096
+n50:  3212
+
+Velvet high read:
+length of contigs:  12
+minimum:  57
+maximum:  33205
+average contig length:  8333
+n50:  33205
+
+Spades high reads:
+length of contigs:  2
+minimum:  111
+maximum:  99915
+average contig length:  50013
