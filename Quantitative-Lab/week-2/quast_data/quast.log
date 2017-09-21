@@ -1,0 +1,159 @@
+/usr/local/Cellar/quast/4.5/quast.py ./fastqfiles/contigs.fa ./spadesout/contigs.fasta ./MAPsdata/contigs.fasta ./reads1_2_spades/contigs.fasta ./read1_2_velvet/contigs.fa -R reference.fasta -o quast_data/
+
+Version: 4.5, 15ca3b9
+
+System information:
+  OS: Darwin-16.7.0-x86_64-i386-64bit (macosx)
+  Python version: 2.7.10
+  CPUs number: 4
+
+Started: 2017-09-20 21:40:22
+
+Logging to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/quast.log
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used
+NOTICE: Maximum number of threads is set to 1 (use --threads option to set it manually)
+
+CWD: /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2
+Main parameters: 
+  Threads: 1, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  reference.fasta ==> reference
+
+Contigs:
+  Pre-processing...
+  1  ./fastqfiles/contigs.fa ==> fastqfiles_contigs
+  2  ./spadesout/contigs.fasta ==> spadesout_contigs
+  3  ./MAPsdata/contigs.fasta ==> MAPsdata_contigs
+  4  ./reads1_2_spades/contigs.fasta ==> reads1_2_spades_contigs
+  5  ./read1_2_velvet/contigs.fa ==> read1_2_velvet_contigs
+
+2017-09-20 21:40:23
+Running Basic statistics processor...
+  Reference genome:
+    reference.fasta, length = 4639675, num fragments = 1, GC % = 50.79
+  Contig files: 
+    1  fastqfiles_contigs
+    2  spadesout_contigs
+    3  MAPsdata_contigs
+    4  reads1_2_spades_contigs
+    5  read1_2_velvet_contigs
+  Calculating N50 and L50...
+    1  fastqfiles_contigs, N50 = 679, L50 = 5, Total length = 8044, GC % = 50.31, # N's per 100 kbp =  0.00
+    2  spadesout_contigs, N50 = 718, L50 = 8, Total length = 15922, GC % = 51.21, # N's per 100 kbp =  0.00
+    3  MAPsdata_contigs, N50 = 4037, L50 = 6, Total length = 58335, GC % = 52.37, # N's per 100 kbp =  0.00
+    4  reads1_2_spades_contigs, N50 = 99915, L50 = 1, Total length = 99915, GC % = 52.58, # N's per 100 kbp =  0.00
+    5  read1_2_velvet_contigs, N50 = 19876, L50 = 2, Total length = 99448, GC % = 52.57, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/GC_content_plot.pdf
+  Drawing fastqfiles_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/fastqfiles_contigs_GC_content_plot.pdf
+  Drawing spadesout_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/spadesout_contigs_GC_content_plot.pdf
+  Drawing MAPsdata_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/MAPsdata_contigs_GC_content_plot.pdf
+  Drawing reads1_2_spades_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/reads1_2_spades_contigs_GC_content_plot.pdf
+  Drawing read1_2_velvet_contigs GC content plot...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/read1_2_velvet_contigs_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/coverage_histogram.pdf
+  Drawing fastqfiles_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/fastqfiles_contigs_coverage_histogram.pdf
+  Drawing spadesout_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/spadesout_contigs_coverage_histogram.pdf
+  Drawing MAPsdata_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/MAPsdata_contigs_coverage_histogram.pdf
+  Drawing reads1_2_spades_contigs coverage histogram (bin size: 1x)...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/reads1_2_spades_contigs_coverage_histogram.pdf
+  Drawing read1_2_velvet_contigs coverage histogram (bin size: 6x)...
+    saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/basic_stats/read1_2_velvet_contigs_coverage_histogram.pdf
+Done.
+
+2017-09-20 21:40:28
+Running Contig analyzer...
+NOTICE: Previous try of gnuplot compilation was unsuccessful! For forced retrying, please remove /usr/local/Cellar/quast/4.5/quast_libs/gnuplot/make.failed and restart QUAST. 
+  1  fastqfiles_contigs
+  1  Logging to files /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/contigs_reports/contigs_report_fastqfiles_contigs.stdout and contigs_report_fastqfiles_contigs.stderr...
+  1  Aligning contigs to the reference
+  1  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_data/contigs_reports/nucmer_output/fastqfiles_contigs --emem -t 1 --emempath \
+     /usr/local/bin/e-mem quast_data/quast_corrected_input/reference.fasta quast_data/quast_corrected_input/fastqfiles_contigs.fa \
+     >> quast_data/contigs_reports/contigs_report_fastqfiles_contigs.stdout 2>> quast_data/contigs_reports/contigs_report_fastqfiles_contigs.stderr
+     The tool returned non-zero. See quast_data/contigs_reports/contigs_report_fastqfiles_contigs.stderr for stderr.
+
+ERROR!   1  Failed aligning contigs fastqfiles_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  2  spadesout_contigs
+  2  Logging to files /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/contigs_reports/contigs_report_spadesout_contigs.stdout and contigs_report_spadesout_contigs.stderr...
+  2  Aligning contigs to the reference
+  2  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_data/contigs_reports/nucmer_output/spadesout_contigs --emem -t 1 --emempath \
+     /usr/local/bin/e-mem quast_data/quast_corrected_input/reference.fasta quast_data/quast_corrected_input/spadesout_contigs.fasta \
+     >> quast_data/contigs_reports/contigs_report_spadesout_contigs.stdout 2>> quast_data/contigs_reports/contigs_report_spadesout_contigs.stderr
+     The tool returned non-zero. See quast_data/contigs_reports/contigs_report_spadesout_contigs.stderr for stderr.
+
+ERROR!   2  Failed aligning contigs spadesout_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  3  MAPsdata_contigs
+  3  Logging to files /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/contigs_reports/contigs_report_MAPsdata_contigs.stdout and contigs_report_MAPsdata_contigs.stderr...
+  3  Aligning contigs to the reference
+  3  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_data/contigs_reports/nucmer_output/MAPsdata_contigs --emem -t 1 --emempath \
+     /usr/local/bin/e-mem quast_data/quast_corrected_input/reference.fasta quast_data/quast_corrected_input/MAPsdata_contigs.fasta \
+     >> quast_data/contigs_reports/contigs_report_MAPsdata_contigs.stdout 2>> quast_data/contigs_reports/contigs_report_MAPsdata_contigs.stderr
+     The tool returned non-zero. See quast_data/contigs_reports/contigs_report_MAPsdata_contigs.stderr for stderr.
+
+ERROR!   3  Failed aligning contigs MAPsdata_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  4  reads1_2_spades_contigs
+  4  Logging to files /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/contigs_reports/contigs_report_reads1_2_spades_contigs.stdout and contigs_report_reads1_2_spades_contigs.stderr...
+  4  Aligning contigs to the reference
+  4  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_data/contigs_reports/nucmer_output/reads1_2_spades_contigs --emem -t 1 \
+     --emempath /usr/local/bin/e-mem quast_data/quast_corrected_input/reference.fasta \
+     quast_data/quast_corrected_input/reads1_2_spades_contigs.fasta >> quast_data/contigs_reports/contigs_report_reads1_2_spades_contigs.stdout \
+     2>> quast_data/contigs_reports/contigs_report_reads1_2_spades_contigs.stderr
+     The tool returned non-zero. See quast_data/contigs_reports/contigs_report_reads1_2_spades_contigs.stderr for stderr.
+
+ERROR!   4  Failed aligning contigs reads1_2_spades_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+  5  read1_2_velvet_contigs
+  5  Logging to files /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/contigs_reports/contigs_report_read1_2_velvet_contigs.stdout and contigs_report_read1_2_velvet_contigs.stderr...
+  5  Aligning contigs to the reference
+  5  /usr/local/Cellar/quast/4.5/quast_libs/MUMmer/nucmer -c 65 -l 65 --maxmatch -p \
+     quast_data/contigs_reports/nucmer_output/read1_2_velvet_contigs --emem -t 1 --emempath \
+     /usr/local/bin/e-mem quast_data/quast_corrected_input/reference.fasta quast_data/quast_corrected_input/read1_2_velvet_contigs.fa \
+     >> quast_data/contigs_reports/contigs_report_read1_2_velvet_contigs.stdout 2>> \
+     quast_data/contigs_reports/contigs_report_read1_2_velvet_contigs.stderr
+     The tool returned non-zero. See quast_data/contigs_reports/contigs_report_read1_2_velvet_contigs.stderr for stderr.
+
+ERROR!   5  Failed aligning contigs read1_2_velvet_contigs to the reference (non-zero exit code). Run with the --debug flag to see additional information.
+Failed aligning the contigs for all the assemblies. Only basic stats are going to be evaluated.
+WARNING: Please rerun QUAST using --test option to ensure that E-MEM aligner works properly.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2017-09-20 21:40:31
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2017-09-20 21:40:32
+RESULTS:
+  Text versions of total report are saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/report.html
+  PDF version (tables and plots) is saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/report.pdf
+  Icarus (contig browser) is saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/icarus.html
+  Log saved to /Users/cmdb/qbb2017-answers/Quantitative-Lab/week-2/quast_data/quast.log
+
+Finished: 2017-09-20 21:40:33
+Elapsed time: 0:00:10.172847
+NOTICEs: 4; WARNINGs: 1; non-fatal ERRORs: 5
+
+Thank you for using QUAST!

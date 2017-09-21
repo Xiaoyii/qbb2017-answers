@@ -1,0 +1,25 @@
+Assembly	fastqfiles_contigs	spadesout_contigs	MAPsdata_contigs	reads1_2_spades_contigs	read1_2_velvet_contigs
+# contigs (>= 0 bp)	311	128	64	2	12
+# contigs (>= 1000 bp)	0	4	18	1	7
+# contigs (>= 5000 bp)	0	0	3	1	7
+# contigs (>= 10000 bp)	0	0	0	1	4
+# contigs (>= 25000 bp)	0	0	0	1	1
+# contigs (>= 50000 bp)	0	0	0	1	0
+Total length (>= 0 bp)	58644	49818	70157	100026	100000
+Total length (>= 1000 bp)	0	5313	54567	99915	99448
+Total length (>= 5000 bp)	0	0	17916	99915	99448
+Total length (>= 10000 bp)	0	0	0	99915	81025
+Total length (>= 25000 bp)	0	0	0	99915	33205
+Total length (>= 50000 bp)	0	0	0	99915	0
+# contigs	12	20	23	1	7
+Largest contig	998	1737	6732	99915	33205
+Total length	8044	15922	58335	99915	99448
+Reference length	4639675	4639675	4639675	4639675	4639675
+GC (%)	50.31	51.21	52.37	52.58	52.57
+Reference GC (%)	50.79	50.79	50.79	50.79	50.79
+N50	679	718	4037	99915	19876
+N75	542	635	1962	99915	13398
+L50	5	8	6	1	2
+L75	9	13	11	1	4
+# N's per 100 kbp	0.00	0.00	0.00	0.00	0.00
+NGA50	-	-	-	-	-
