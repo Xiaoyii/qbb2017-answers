@@ -1,0 +1,8 @@
+Consequences of the top 5 highest quality variants: 
+
+ID		QUAL		ANN
+chrXII	87098.3		ANN=A
+chrXII	62724.2		ANN=ATTTTTTTC
+chrM	47629.2		ANN=T
+chrM	44913.1		ANN=A
+chrM	43509.5		ANN=T
