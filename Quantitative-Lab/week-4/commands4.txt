@@ -1,0 +1,27 @@
+brew install plink2
+
+unzip
+gunzip BYxRM_segs_saccer3.bam.simplified.vcf.xz 
+
+ 
+# make my plink2 plots
+plink2 --vcf "BYxRM_segs_saccer3.bam.simplified.vcf" --id-delim "_" --pca 2 tabs --allow-extra-chr  --mind
+
+
+#make my vcf histogram
+./vcfplot.py BYxRM_segs_saccer3.bam.simplified.vcf 
+
+#formatting my phenotype file
+./convertphenofile.py BYxRM_PhenoData.txt tabBYxRM_PhenoData.txt
+
+
+#make my 46 p-value files
+plink2 --vcf BYxRM_segs_saccer3.bam.simplified.vcf --pheno tabBYxRM_PhenoData.txt --allow-no-sex --linear --allow-extra-chr --all-pheno
+
+#make manhattan plot for 1 p-value file
+./manhattanscript1.py plink.P10.assoc.linear 
+
+#automate plot for all 46 p-values
+./automanhanttan.py 
+
+
