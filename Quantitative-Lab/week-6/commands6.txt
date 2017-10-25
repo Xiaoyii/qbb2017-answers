@@ -1,0 +1,77 @@
+unzip 
+tar -xzf g1e.tar.xz
+gunzip chr19.fa.gz 
+
+index chromosome 19
+bowtie2-build chr19.fa indexedchr19.fastq
+
+aligning
+bowtie2 -q -x indexedchr19.fastq -U CTCF_ER4.fastq -S alighedCTCF_ER4.sam
+270631 reads; of these:
+  270631 (100.00%) were unpaired; of these:
+    4371 (1.62%) aligned 0 times
+    264736 (97.82%) aligned exactly 1 time
+    1524 (0.56%) aligned >1 times
+98.38% overall alignment rate
+
+bowtie2 -q -x indexedchr19.fastq -U CTCF_G1E.fastq -S alighedCTCF_G1E.sam
+270968 reads; of these:
+  270968 (100.00%) were unpaired; of these:
+    3863 (1.43%) aligned 0 times
+    265514 (97.99%) aligned exactly 1 time
+    1591 (0.59%) aligned >1 times
+98.57% overall alignment rate
+
+bowtie2 -q -x indexedchr19.fastq -U input_ER4.fastq -S alighedinput_ER4.sam
+166130 reads; of these:
+  166130 (100.00%) were unpaired; of these:
+    3459 (2.08%) aligned 0 times
+    161719 (97.34%) aligned exactly 1 time
+    952 (0.57%) aligned >1 times
+97.92% overall alignment rate
+
+bowtie2 -q -x indexedchr19.fastq -U input_G1E.fastq -S alighedinput_G1E.sam
+276733 reads; of these:
+  276733 (100.00%) were unpaired; of these:
+    5012 (1.81%) aligned 0 times
+    270142 (97.62%) aligned exactly 1 time
+    1579 (0.57%) aligned >1 times
+98.19% overall alignment rate
+
+
+macs2 callpeak
+macs2 callpeak -t alighedCTCF_ER4.sam -c alighedinput_ER4.sam -f SAM --outdir ER4
+macs2 callpeak -t alighedCTCF_G1E.sam -c alighedinput_G1E.sam --outdir ER4
+macs2 callpeak -t alighedCTCF_ER4.sam -g 61000000 --outdir ER4_nocontrol
+macs2 callpeak -t alighedCTCF_G1E.sam -g 61000000 --outdir G1E_nocontrol
+
+
+bedtools
+bedtools intersect -v -a ./G1E/NA_peaks.narrowPeak -b ./ER4/NA_peaks.narrowPeak > inG1EnotER4
+bedtools intersect -v -a ./ER4/NA_peaks.narrowPeak -b ./G1E/NA_peaks.narrowPeak > inER4notG1E
+
+
+sorting top 100 ER4 narrow peaks for MEME-CHIP
+sort -k 9,9 -n -r ./ER4/NA_peaks.narrowPeak | head -n 100 > sortedER4narrowpeaks.bed  
+sort -k 9,9 -n -r ./G1E/NA_peaks.narrowPeak | head -n 100 > sortedG1Enarrowpeaks.bed 
+
+bedtools getfasta -fi chr19.fa -bed ./sortedG1Enarrowpeaks.bed > G1E_macs2_fasta_memes.fa
+bedtools getfasta -fi chr19.fa -bed ./sortedER4narrowpeaks.bed > ER4_macs2_fasta_memes.fa
+
+
+/usr/local/opt/meme/bin/meme-chip -meme-maxw 20 -db motif_databases/JASPAR/JASPAR_CORE_2016_vertebrates.meme ER4_macs2_fasta_memes.fa 
+
+
+at the end, give top 100 diffenernt peaks in .bed files
+sequence logo(picture) 
+text file description of where motifs occur, any consistant locations they occur
+MEME .html
+
+
+
+
+
+
+
+
+
