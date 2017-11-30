@@ -1,0 +1,12 @@
+submit coordinates and interaction value for each row and column with CTCF interaction
+
+normalizing data:
+hifive 5c-complete express -C ./Nora_ESC_male_E14.counts -P hi5 ./Nora_Primers.bed 
+
+making heatmaps:
+hifive 5c-heatmap hi5.fcp wk8frags.heat -i wk8frags.png -d fragment
+hifive 5c-heatmap hi5.fcp wk8enrich.heat -i wk8enrich.png -d enrichment
+
+
+
+
